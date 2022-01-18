@@ -13,13 +13,12 @@ const GlobalStyle = createGlobalStyle`
 body {
     display: flex;
     width:100%;
+    background-color: white;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin: 0;
     padding: 0;
-    background: white;
-
   }
 `
 

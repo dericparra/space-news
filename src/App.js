@@ -1,3 +1,4 @@
+import CardsContainer from './components/CardsContainer'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import GlobalStyle from './styles/globalStyles'
@@ -5,9 +6,10 @@ import GlobalStyle from './styles/globalStyles'
 function App() {
   return (
     <div className="App">
+      <GlobalStyle />
       <Header />
       <Hero />
-      <GlobalStyle />
+      <CardsContainer />
     </div>
   )
 }

@@ -5,7 +5,7 @@ Site com noticiais espaciais atualizado diariamente, com as melhores fontes da Ã
 
 As seguintes tecnologias foram usadas nesse projeto
 
-- Next.js
+- React
 - Eslint
 - Prettier
 - Styled Components

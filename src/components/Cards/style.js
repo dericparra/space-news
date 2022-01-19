@@ -44,13 +44,64 @@ export const SiteLink = styled.button`
   border: 2px solid #aaa;
   padding: 0 4px;
   border-radius: 5px;
+  cursor: pointer;
+  > a {
+    text-decoration: none;
+    color: black;
+  }
 `
 
 export const SeeMore = styled.button`
   padding: 10px 15px;
   font-size: 18px;
   background-color: #d07017;
-  color: white;
   border: 0px;
   border-radius: 5px;
+  cursor: pointer;
+  color: white;
+
+  > a {
+    text-decoration: none;
+    color: white;
+  }
+`
+
+export const Modal = styled.div`
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export const ModalContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 30px;
+  max-width: 500px;
+  margin-bottom: 40px;
+  background-color: white;
+`
+
+export const Close = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 0px;
+  width: 20px;
+  height: 20px;
+  color: red;
+  position: relative;
+  top: -125px;
+  right: -30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
 `

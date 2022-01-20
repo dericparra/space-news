@@ -14,7 +14,7 @@ import {
   ModalContainer
 } from './style'
 
-const Card = () => {
+const Card = ({ description, title, url, source, image, date }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -22,23 +22,15 @@ const Card = () => {
       {isOpen && (
         <Modal>
           <ModalContainer>
-            <ImgBox></ImgBox>
+            <ImgBox style={{ backgroundImage: `url(${image})` }}></ImgBox>
             <InfoBox>
-              <Title>Voo espacial Sputink</Title>
+              <Title>{title}</Title>
               <ArticleInfos>
-                <Day>dd/mm/aaaa</Day>
-                <SiteLink>
-                  <a href="">nasa</a>
-                </SiteLink>
+                <Day>{date.slice(0, 10)}</Day>
               </ArticleInfos>
-              <ArticleDescription>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industrys standard dummy text
-                ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book.
-              </ArticleDescription>
+              <ArticleDescription>{description}</ArticleDescription>
               <SeeMore>
-                <a href="">Ir para o site</a>
+                <a href={url}>Ir para o site</a>
               </SeeMore>
             </InfoBox>
             <Close className="close" onClick={() => setIsOpen(false)}>
@@ -48,21 +40,16 @@ const Card = () => {
         </Modal>
       )}
       <Container>
-        <ImgBox></ImgBox>
+        <ImgBox style={{ backgroundImage: `url(${image})` }}></ImgBox>
         <InfoBox>
-          <Title>Voo espacial Sputink</Title>
+          <Title>{title}</Title>
           <ArticleInfos>
-            <Day>dd/mm/aaaa</Day>
+            <Day>{date.slice(0, 10)}</Day>
             <SiteLink>
-              <a href="">nasa</a>
+              <a href="">{source}</a>
             </SiteLink>
           </ArticleInfos>
-          <ArticleDescription>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </ArticleDescription>
+          <ArticleDescription>{description}</ArticleDescription>
           <SeeMore onClick={() => setIsOpen(true)}>Ver Mais</SeeMore>
         </InfoBox>
       </Container>

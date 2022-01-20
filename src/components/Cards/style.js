@@ -2,15 +2,26 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: auto;
   max-width: 500px;
   margin-bottom: 40px;
 `
 
 export const ImgBox = styled.div`
+  display: flex;
+  width: 100%;
+  height: 200px;
+  max-height: 250px;
+  background-color: #2f2f2f;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   flex: 2;
+  margin-right: 25px;
 `
 export const InfoBox = styled.div`
   flex: 3;
@@ -53,6 +64,7 @@ export const SiteLink = styled.button`
 
 export const SeeMore = styled.button`
   padding: 10px 15px;
+  margin: 10px 0;
   font-size: 18px;
   background-color: #d07017;
   border: 0px;
